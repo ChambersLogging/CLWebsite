@@ -325,9 +325,10 @@ footer {
 }
 
 @media (max-width: 780px) {
-    .hero-img-container { height: 300px; }
+    .hero-img-container { height: 400px; }
     .hero-content h2 { font-size: 28px; }
     .hero-content p { font-size:16px; }
     .cta-btn { padding:10px 20px; font-size:16px; }
     .footer-container { flex-direction: column; text-align: center; }
 }
+
