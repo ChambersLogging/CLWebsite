@@ -22,27 +22,51 @@
     <main class="content">
         <section class="contact-section">
             <h2>Contact Us</h2>
-            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+            <form class="contact-form" id="contactForm"
+                  action="https://api.web3forms.com/submit"
+                  method="POST" novalidate>
+
                 <input type="hidden" name="access_key" value="7ccd3ef4-782a-4dcc-b054-166aed079719">
+
                 <input name="first" type="text" placeholder="First Name" required>
+
                 <input name="last" type="text" placeholder="Last Name" required>
-                <input name="email" type="email" placeholder="Email">
-                <input name="tel" type="tel" placeholder="Phone Number" required>
-                <select name="services" id="services">
+
+                <input name="email" type="email" placeholder="Email Address">
+                <span class="error" id="emailError"></span>
+
+                <input name="tel"
+                       id="phone"
+                       type="tel"
+                       placeholder="Phone Number"
+                       required
+                       inputmode="numeric"
+                       maxlength="14"
+                       pattern="^\(\d{3}\)-\d{3}-\d{4}$">
+                <span class="error" id="phoneError"></span>
+
+                <select name="services" id="services" required>
                     <option value="choose">Choose a service.</option>
                     <option value="craneRemoval">Crane Removal</option>
-                    <option value="landClearing">Land Clearing</option>
-                    <option value="timberhauling">Timber Hauling</option>
-                    <option value="stumpGrinding">Stump Grinding</option>
-                    <option value="ohter">Other</option>
+                    <option value="landClearing">Tree Removal</option>
+                    <option value="timberhauling">Land Clearing</option>
+                    <option value="stumpGrinding">Timber Hauling</option>
+                    <option value="StumpGrinding">Stump Grinding</option>
+                    <option value="treeTrimming">Tree Trimming</option>
+                    <option value="brushClearing">Brush Clearing/Lot Preparation</option>
+                    <option value="emergency">Emergency Storm Response</option>
+                    <option value="other">Other</option>
                 </select>
+                <span class="error" id="serviceError"></span>
+
                 <textarea name="message" placeholder="How can we help?" required></textarea>
+
                 <button type="submit">Send Message</button>
             </form>
         </section>
     </main>
 
-    <!-- FOOTER -->
     <footer id="contact">
         <div class="footer-container">
             <div class="footer-col">
@@ -69,17 +93,58 @@
             © 2025 Chambers Logging — All Rights Reserved
         </div>
     </footer>
-
 </div>
 
 <script>
     const menu = document.getElementById("mobile-menu");
     const nav = document.getElementById("nav-menu");
     menu.addEventListener("click", () => nav.classList.toggle("active"));
-    window.onload = function() {
-        // Reset the form fields when the page loads
-        document.getElementById("form").reset();
-    };
+
+    const form = document.getElementById("contactForm");
+    const phoneInput = document.getElementById("phone");
+    const emailInput = form.querySelector('input[name="email"]');
+    const serviceSelect = document.getElementById("services");
+
+    const phoneError = document.getElementById("phoneError");
+    const emailError = document.getElementById("emailError");
+    const serviceError = document.getElementById("serviceError");
+
+    // Phone auto-format filter: (###)-###-####
+    phoneInput.addEventListener("input", () => {
+        let digits = phoneInput.value.replace(/\D/g, "").substring(0, 10);
+
+        let formatted = "";
+        if (digits.length > 0) formatted = "(" + digits.substring(0, 3);
+        if (digits.length >= 4) formatted += ")-" + digits.substring(3, 6);
+        if (digits.length >= 7) formatted += "-" + digits.substring(6, 10);
+
+        phoneInput.value = formatted;
+    });
+
+    form.addEventListener("submit", function (e) {
+        let valid = true;
+
+        phoneError.textContent = "";
+        emailError.textContent = "";
+        serviceError.textContent = "";
+
+        if (!phoneInput.checkValidity()) {
+            phoneError.textContent = "Phone number must be in the format (###)-###-####.";
+            valid = false;
+        }
+
+        if (emailInput.value && !emailInput.checkValidity()) {
+            emailError.textContent = "Please enter a valid email address.";
+            valid = false;
+        }
+
+        if (serviceSelect.value === "choose") {
+            serviceError.textContent = "Please select a service.";
+            valid = false;
+        }
+
+        if (!valid) e.preventDefault();
+    });
 </script>
 
 </body>
