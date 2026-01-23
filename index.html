@@ -1,80 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Issaquah Premier | Tree Removal & Logging Services in Western Washington</title>
-    <link rel="stylesheet" href="css/contact.css">
-    <meta name="description" content="Contact Chambers Logging for professional 
-        tree removal, logging, land clearing, and emergency storm services
-         across Western Washington. Request a quote today.">
-    <link rel="canonical" href="https://www.issaquahpremier.com/contact.html">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Issaquah Premier | Tree Removal & Logging Services in Western Washington</title>
+    <link rel="stylesheet" href="css/homestyles.css" />
+    <meta name="description" content="Chambers Logging provides professional logging, 
+        tree removal, land clearing, and emergency storm services throughout
+        Western Washington. Family-owned, licensed, bonded, and insured.">
+    <link rel="canonical" href="https://www.issaquahpremier.com/">
 </head>
+
 <body>
-<div class="page-container">
-    <header class="header">
+    <header>
         <div class="nav-img">
             <img src='images/Logo1.jpg' alt="Issaquah Premier, Chambers Logging Logo">
         </div>
         <div class="menu-toggle" id="mobile-menu">☰</div>
         <nav id="nav-menu">
-            <a href="index.html#hero">Home</a>
-            <a href="index.html#about">About Us</a>
-            <a href="index.html#services">Services</a>
+            <a href="#hero">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
-    <main class="content">
-        <section class="contact-section">
-            <h1>Contact Issaquah Premier</h1>
-            <p class="contact-intro">
-                Have a question, project idea, or just want to chat about how we can help with your land or
-                timber? Fill out the form below and our team will get back to you promptly. We are 
-                here to make your project smooth and stress free!
-            </p>
-            <form class="contact-form" id="contactForm"
-                  action="https://api.web3forms.com/submit"
-                  method="POST" novalidate>
+    <div class="hero-img-container" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>CHAMBERS LOGGING AND TREE SERVICES</h1>
+            <p>Reliable and efficient tree solutions throughout western Washington</p>
+            <a href="contact.html" class="cta-btn">Get a Quote</a>
+        </div>
+    </div>
 
-                <input type="hidden" name="access_key" value="7ccd3ef4-782a-4dcc-b054-166aed079719">
+    <section class="section" id="about">
+        <h2 class="section-title">“From Our Family to Your Forest.”</h2>
+        <p>
+            Chambers Logging and Tree Service is a family owned business built on generations of hard work and respect 
+            for the land. From  multi scale logging and commercial projects to residential tree removal, trimming,
+            and land clearing through Issaquah Premier Tree Service, we bring the  same care, experience and
+            professionalism to every job.
+        </p>
+        <p>
+            We are a small but dedicated team known for safe and efficient work with honest results. Whether you're managing
+            timber, protecting your property, or improving your property, your land is treated with the 
+            respect it deserves.
+        </p>
+        <p>
+            Chambers Logging and Tree Service proudly serves homeowners, landowners, and commercial clients throughout Western
+             Washington, including Issaquah and surrounding areas.
+        </p>
+    </section>
+    <section class="section" id="services">
+        <h2 class="section-title">What Do We Offer?</h2>
+        
+        <p class="serviceP">Core services</p>
 
-                <input name="first" type="text" placeholder="First Name  (required)" required>
+        <div class="services">
+            <div class="service-card">
+                <div class="image-container">
+                    <img src="images/Crane1.JPG" alt="Crane-assisted tree removal service by Chambers Logging in Washington">
+                </div>
+                <h3>Crane Removal</h3>
+                <p>A safer alternative for removing larger trees from your property.</p>
+                <a href="contact.html" class="service-btn">Contact Us</a>
+            </div>
 
-                <input name="last" type="text" placeholder="Last Name  (required)" required>
+            <div class="service-card">
+                <div class="image-container">
+                    <img src="images/Roadside1.jpg" alt="Stump Grinding Service">
+                </div>
+                <h3>Tree Removal</h3>
+                <p>Professional removal of dead, damaged, or unwanted
+                    trees using the safest method for your property.</p>
+                <a href="contact.html" class="service-btn">Contact Us</a>
+            </div>
 
-                <input name="email" type="email" placeholder="Email Address  (required)" required>
-                <span class="error" id="emailError"></span>
+            <div class="service-card">
+                <div class="image-container">
+                    <img src="images/LandClearing1.jpg" alt="Land clearing service">
+                </div>
+                <h3>Land Clearing</h3>
+                <p>Complete clearing for construction, agriculture, and development.</p>
+                <a href="contact.html" class="service-btn">Contact Us</a>
+            </div>
 
-                <input name="tel"
-                       id="phone"
-                       type="tel"
-                       placeholder="Phone Number"
-                       inputmode="tel"
-                       maxlength="14"
-                       pattern="^\(\d{3}\)-\d{3}-\d{4}$">
-                <span class="error" id="phoneError"></span>
+            <div class="service-card">
+                <div class="image-container">
+                    <img src="images/Timber1.jpg" alt="Timber hauling service">
+                </div>
+                <h3>Timber Hauling</h3>
+                <p>Transportation of timber from site to mill.</p>
+                <a href="contact.html" class="service-btn">Contact Us</a>
+            </div>
+            
+        </div>
+        <div class="services">
+            <p class="serviceP">Property and Support</p>
 
-                <select name="services" id="serviceoptions" required>
-                    <option value="choose">Choose a service.</option>
-                    <option value="craneRemoval">Crane Removal</option>
-                    <option value="treeRemoval">Tree Removal</option>
-                    <option value="landClearing">Land Clearing</option>
-                    <option value="timberHauling">Timber Hauling</option>
-                    <option value="stumpGrinding">Stump Grinding</option>
-                    <option value="treeTrimming">Tree Trimming</option>
-                    <option value="brushClearing">Brush Clearing/Lot Preparation</option>
-                    <option value="emergency">Emergency Storm Response</option>
-                    <option value="other">Other</option>
-                </select>
-                <span class="error" id="serviceError"></span>
+            <div class="service-card">
+                <div class="image-container">
+                    <img src="images/Stump1.jpg" alt="Stump Grinding Service">
+                </div>
+                <h3>Stump Grinding</h3>
+                <p>The best option for removing unwanted stumps on your property.</p>
+                <a href="contact.html" class="service-btn">Contact Us</a>
+            </div>
 
-                <textarea name="message" placeholder="How can we help?" required></textarea>
+            <div class="service-card">
+                <div class="image-container">
+                    <img src="images/LandClearing4.jpg" alt="Land clearing service">
+                </div>
+                <h3>Tree Pruning and Trimming</h3>
+                <p>Selective pruning to improve tree health, safety, and aesthetics while
+                    protecting structures.</p>
+                <a href="contact.html" class="service-btn">Contact Us</a>
+            </div>
 
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-    </main>
+            <div class="service-card">
+                <div class="image-container">
+                    <img src="images/Emergency1.jpg" alt="Timber hauling service">
+                </div>
+                <h3>Emergency Storm Response</h3>
+                <p>Prompt response for fallen or dangerous trees after storms to protect
+                    homes, driveways, and access routes.</p>
+                <a href="contact.html" class="service-btn">Contact Us</a>
+            </div>
+
+            <div class="service-card">
+                <div class="image-container">
+                    <img src="images/Roadside3.jpg" alt="Stump grinding service">
+                </div>
+                <h3>Brush Clearing and Lot Preparation</h3>
+                <p>Clearing brush and undergrowth for improved access, fire mitigation
+                    , and site preparation.</p>
+                <a href="contact.html" class="service-btn">Contact Us</a>
+            </div>
+
+        </div>
+    </section>
 
     <footer id="contact">
         <div class="footer-container">
@@ -85,9 +150,9 @@
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
-                <a href="index.html#hero">Home</a>
-                <a href="index.html#about">About Us</a>
-                <a href="index.html#services">Services</a>
+                <a href="#hero">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#services">Services</a>
                 <a href="contact.html">Contact</a>
             </div>
             <div class="footer-col">
@@ -102,64 +167,33 @@
             © 2025 Chambers Logging — All Rights Reserved
         </div>
     </footer>
-</div>
 
-<script>
-    const menu = document.getElementById("mobile-menu");
-    const nav = document.getElementById("nav-menu");
-    menu.addEventListener("click", () => nav.classList.toggle("active"));
+    <script>
+        const mobileMenu = document.getElementById("mobile-menu");
+        const navMenu = document.getElementById("nav-menu");
 
-    const form = document.getElementById("contactForm");
-    const phoneInput = document.getElementById("phone");
-    const emailInput = form.querySelector('input[name="email"]');
-    const serviceSelect = document.getElementById("serviceoptions");
+        mobileMenu.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+        });
 
-    const phoneError = document.getElementById("phoneError");
-    const emailError = document.getElementById("emailError");
-    const serviceError = document.getElementById("serviceError");
+        const sections = document.querySelectorAll(".section");
 
-    // Phone auto-format filter: (###)-###-####
-    phoneInput.addEventListener("input", () => {
-        let digits = phoneInput.value.replace(/\D/g, "").substring(0, 10);
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        }, { threshold: 0.2 });
 
-        let formatted = "";
-        if (digits.length > 0) formatted = "(" + digits.substring(0, 3);
-        if (digits.length >= 4) formatted += ")-" + digits.substring(3, 6);
-        if (digits.length >= 7) formatted += "-" + digits.substring(6, 10);
-
-        phoneInput.value = formatted;
-    });
-
-    form.addEventListener("submit", function (e) {
-        let valid = true;
-
-        phoneError.textContent = "";
-        emailError.textContent = "";
-        serviceError.textContent = "";
-
-        if (!phoneInput.checkValidity()) {
-            phoneError.textContent = "Phone number must be in the format (###)-###-####.";
-            valid = false;
-        }
-
-        if (emailInput.value && !emailInput.checkValidity()) {
-            emailError.textContent = "Please enter a valid email address.";
-            valid = false;
-        }
-
-        if (serviceSelect.value === "choose") {
-            serviceError.textContent = "Please select a service.";
-            valid = false;
-        }
-
-        if (!valid) e.preventDefault();
-    });
-</script>
+        sections.forEach(section => observer.observe(section));
+    </script>
 
 </body>
 </html>
 
  
+
 
 
 
