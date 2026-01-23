@@ -9,7 +9,9 @@
 
 <body>
     <header>
-        <h1>Chambers Logging</h1>
+        <div class="nav-img">
+            <img src='images/Logo1.jpg' alt="Issaquah Premier, Chambers Logging Logo">
+        </div>
         <div class="menu-toggle" id="mobile-menu">☰</div>
         <nav id="nav-menu">
             <a href="#hero">Home</a>
@@ -22,7 +24,7 @@
     <div class="hero-img-container" id="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h2>CHAMBERS LOGGING AND TREE SERVICES</h2>
+            <h1>CHAMBERS LOGGING AND TREE SERVICES</h211>
             <p>Reliable and efficient tree solutions throughout western Washington</p>
             <a href="contact.html" class="cta-btn">Get a Quote</a>
         </div>
@@ -45,7 +47,7 @@
     <section class="section" id="services">
         <h2 class="section-title">What Do We Offer?</h2>
         
-        <p class="serviceP">-- Core services --</p>
+        <p class="serviceP">Core services</p>
 
         <div class="services">
             <div class="service-card">
@@ -59,7 +61,7 @@
 
             <div class="service-card">
                 <div class="image-container">
-                    <img src="images/Roadside1.jpg" alt="tree removal service">
+                    <img src="images/Roadside1.jpg" alt="Stump Grinding Service">
                 </div>
                 <h3>Tree Removal</h3>
                 <p>Professional removal of dead, damaged, or unwanted
@@ -87,7 +89,7 @@
             
         </div>
         <div class="services">
-            <p class="serviceP">-- Property and Support --</p>
+            <p class="serviceP">Property and Support</p>
 
             <div class="service-card">
                 <div class="image-container">
@@ -148,7 +150,7 @@
             <div class="footer-col">
                 <h4>Contact Info</h4>
                 <a href="tel:12063994545">(206)-399-4545</a>
-                <p>Chamberslogging@gmail.com</p>
+                <p>Chamberslogging23@gmail.com</p>
                 <p>We would love to hear your feedback!</p>
             </div>
         </div>
@@ -166,14 +168,25 @@
             navMenu.classList.toggle("active");
         });
 
+        const sections = document.querySelectorAll(".section");
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        }, { threshold: 0.2 });
+
+        sections.forEach(section => observer.observe(section));
     </script>
 
 </body>
 </html>
 
 
-
  
+
 
 
 
