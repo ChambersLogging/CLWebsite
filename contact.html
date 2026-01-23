@@ -23,38 +23,41 @@
 
     <main class="content">
         <section class="contact-section">
-            <h2>Contact Us</h2>
-
+            <h2>Contact Us!</h2>
+            <p class="contact-intro">
+                Have a question, project idea, or just want to chat about how we can help with your land or
+                timber? Fill out the form below and our team will get back to you promptly. We are 
+                here to make your project smooth and stress free!
+            </p>
             <form class="contact-form" id="contactForm"
                   action="https://api.web3forms.com/submit"
                   method="POST" novalidate>
 
                 <input type="hidden" name="access_key" value="7ccd3ef4-782a-4dcc-b054-166aed079719">
 
-                <input name="first" type="text" placeholder="First Name" required>
+                <input name="first" type="text" placeholder="First Name  (required)" required>
 
-                <input name="last" type="text" placeholder="Last Name" required>
+                <input name="last" type="text" placeholder="Last Name  (required)" required>
 
-                <input name="email" type="email" placeholder="Email Address">
+                <input name="email" type="email" placeholder="Email Address  (required)" required>
                 <span class="error" id="emailError"></span>
 
                 <input name="tel"
                        id="phone"
                        type="tel"
                        placeholder="Phone Number"
-                       required
-                       inputmode="numeric"
+                       inputmode="tel"
                        maxlength="14"
                        pattern="^\(\d{3}\)-\d{3}-\d{4}$">
                 <span class="error" id="phoneError"></span>
 
-                <select name="services" id="services" required>
+                <select name="services" id="serviceoptions" required>
                     <option value="choose">Choose a service.</option>
                     <option value="craneRemoval">Crane Removal</option>
-                    <option value="landClearing">Tree Removal</option>
-                    <option value="timberhauling">Land Clearing</option>
-                    <option value="stumpGrinding">Timber Hauling</option>
-                    <option value="StumpGrinding">Stump Grinding</option>
+                    <option value="treeRemoval">Tree Removal</option>
+                    <option value="landClearing">Land Clearing</option>
+                    <option value="timberHauling">Timber Hauling</option>
+                    <option value="stumpGrinding">Stump Grinding</option>
                     <option value="treeTrimming">Tree Trimming</option>
                     <option value="brushClearing">Brush Clearing/Lot Preparation</option>
                     <option value="emergency">Emergency Storm Response</option>
@@ -78,15 +81,15 @@
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
-                <a href="#hero">Home</a>
-                <a href="#about">About Us</a>
-                <a href="#services">Services</a>
+                <a href="index.html#hero">Home</a>
+                <a href="index.html#about">About Us</a>
+                <a href="index.html#services">Services</a>
                 <a href="contact.html">Contact</a>
             </div>
             <div class="footer-col">
                 <h4>Contact Info</h4>
                 <a href="tel:12063994545">(206)-399-4545</a>
-                <p>Chamberslogging000@gmail.com</p>
+                <p>Chamberslogging23@gmail.com</p>
                 <p>We would love to hear your feedback!</p>
             </div>
         </div>
@@ -105,7 +108,7 @@
     const form = document.getElementById("contactForm");
     const phoneInput = document.getElementById("phone");
     const emailInput = form.querySelector('input[name="email"]');
-    const serviceSelect = document.getElementById("services");
+    const serviceSelect = document.getElementById("serviceoptions");
 
     const phoneError = document.getElementById("phoneError");
     const emailError = document.getElementById("emailError");
@@ -151,5 +154,6 @@
 
 </body>
 </html>
+
 
 
