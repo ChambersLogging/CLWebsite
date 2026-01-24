@@ -141,7 +141,7 @@ nav a {
     margin-top: 25px;
     display: inline-block;
     padding: 12px 28px;
-    background: #f17d11;
+    background: #ee7606;
     color: #fff;
     border-radius: 6px;
     text-decoration: none;
@@ -304,7 +304,7 @@ nav a {
     background: none;
     padding: 0;
     border-radius: 0;
-    color: #f17d11;
+    color: #ee7606;
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
@@ -357,12 +357,12 @@ nav a {
 }
 
 .cta-secondary {
-    background: #f17d11;;
+    background: #ee7606;
     color: #fff;
 }
 
 .cta-secondary:hover {
-    background: #f17d11;;
+    background: #ee7606;
     transform: scale(1.05);
 }
 
@@ -433,6 +433,7 @@ footer {
     .cta-btn { padding:10px 20px; font-size:16px; }
     .footer-container { flex-direction: column; text-align: center; }
 }
+
 
 
 
