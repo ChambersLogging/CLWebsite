@@ -153,7 +153,73 @@ nav a {
     background: #c75e0d;
     transform: scale(1.05);
 }
+.emergency-banner {
+    background: #2f2f2f;
+    color: #fff;
+    padding: 22px 40px;
+    border-bottom: 3px solid #da710f;
+}
 
+.emergency-content {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.emergency-label {
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.emergency-content p {
+    flex: 1;
+    margin: 0;
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.9);
+}
+
+.emergency-phone {
+    background: #fff;
+    color: #2f2f2f;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.emergency-phone:hover {
+    background: #f1f1f1;
+    transform: scale(1.05);
+}
+
+@media (max-width: 780px) {
+    .emergency-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 14px;
+    }
+
+    .emergency-content p {
+        font-size: 0.9rem;
+    }
+
+    .emergency-phone {
+        width: 100%;
+        text-align: center;
+    }
+}
 .section {
     padding: 60px 40px;
     max-width: 1100px;
@@ -226,8 +292,6 @@ nav a {
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     object-fit: cover;
 }
-
-/* Responsive */
 @media (max-width: 780px) {
     .about-container {
         flex-direction: column;
@@ -281,18 +345,6 @@ nav a {
     line-height: 1.6;
     color: #555;
 }
-
-.serviceP::before,
-.serviceP::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(to right, transparent, #ccc);
-}
-
-.serviceP::after {
-    background: linear-gradient(to left, transparent, #ccc);
-}
 .service-card h3,
 .service-card p {
     padding: 0 25px;
@@ -328,18 +380,28 @@ nav a {
     object-fit: contain;
     display: block;
 }
+.viewmore-ctn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+.viewmore-btn {
+    color: black;
+}
+.viewmore-btn:hover {
+    color: #c75e0d;
+}
+
 .cta-section {
     margin-top: 80px;
     padding: 70px 40px;
     background: #f6f6f6;
 }
-
 .cta-container {
     max-width: 900px;
     margin: auto;
     text-align: center;
 }
-
 .cta-container h2 {
     font-size: 2rem;
     font-weight: 700;
@@ -347,7 +409,6 @@ nav a {
     letter-spacing: -0.5px;
     color: #2b2b2b;
 }
-
 .cta-container p {
     font-size: 1rem;
     color: #555;
@@ -355,17 +416,14 @@ nav a {
     margin: 0 auto 28px;
     line-height: 1.7;
 }
-
 .cta-secondary {
     background: #ee7606;
     color: #fff;
 }
-
 .cta-secondary:hover {
     background: #ee7606;
     transform: scale(1.05);
 }
-
 @media (max-width: 780px) {
     .cta-section {
         padding: 50px 20px;
@@ -379,6 +437,7 @@ nav a {
         font-size: 0.95rem;
     }
 }
+
 footer {
     background: #2f2f2f;
     color: #fff;
