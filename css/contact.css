@@ -208,6 +208,11 @@ footer {
     font-size: 14px;
     color: #aaa;
 }
+@media (max-width: 780px) {
+    .cta-btn { padding:10px 20px; font-size:16px; }
+    .footer-container { flex-direction: column; text-align: center; }
+}
+
 
 
 
