@@ -386,10 +386,32 @@ nav a {
     margin-top: 30px;
 }
 .viewmore-btn {
-    color: black;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    color: #ee7606;
+    text-decoration: none;
+    position: relative;
+    padding: 4px 16px;
+    border: 2px solid #ee7606;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+.viewmore-btn::after {
+    content: '→';
+    margin-left: 8px;
+    transition: margin-left 0.3s ease;
 }
 .viewmore-btn:hover {
-    color: #c75e0d;
+    background: #ee7606;
+    color: #fff;
+    transform: -2px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.viewmore-btn:hover::after {
+    margin-left: 12px;
 }
 
 .cta-section {
@@ -492,6 +514,7 @@ footer {
     .cta-btn { padding:10px 20px; font-size:16px; }
     .footer-container { flex-direction: column; text-align: center; }
 }
+
 
 
 
