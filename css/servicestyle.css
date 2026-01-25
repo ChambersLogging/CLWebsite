@@ -98,6 +98,20 @@ nav a {
     margin-bottom: 28px;
     letter-spacing: -0.75px;
 }
+.section-description {
+    font-size: 1.05rem;
+    color: #444;
+    max-width: 850px;
+    margin: 15px auto 50px auto;
+    line-height: 1.7;
+    text-align: center;
+}
+@media (max-width: 780px) {
+    .section-description {
+        font-size: 0.95rem;
+        margin-bottom: 40px;
+    }
+}
 .section p {
     font-size: 1rem;
     line-height: 1.75;
